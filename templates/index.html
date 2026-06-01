@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Dropout Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <h1>🎓 Student Dropout Prediction System</h1>
+    <p>AI Powered Risk Analysis using Random Forest</p>
+
+    <div class="grid">
+
+        <div class="card">
+            <h2>📊 Predict Risk</h2>
+            <p>Check if a student may drop out</p>
+            <a href="/predictpage"><button>Start Prediction</button></a>
+        </div>
+
+        <div class="card">
+            <h2>🧠 Model</h2>
+            <p>Random Forest Classifier</p>
+        </div>
+
+        <div class="card">
+            <h2>📈 Data Factors</h2>
+            <p>Grades, Attendance, Support</p>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
