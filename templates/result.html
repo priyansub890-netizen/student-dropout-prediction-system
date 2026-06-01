@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="result-container">
+
+    <h1>{{ prediction_text }}</h1>
+
+    <p>Risk Score: <b>{{ risk_score }}%</b></p>
+
+    <!-- CIRCULAR RING -->
+    <div class="circle"
+         style="--percent: {{ risk_score|int }}">
+
+        <div class="inner">
+            {{ risk_score|int }}%
+        </div>
+
+    </div>
+
+    <!-- WHY SECTION -->
+    <div class="why-box">
+        <h2>📌 Why this risk?</h2>
+        <p>{{ summary }}</p>
+    </div>
+
+    <!-- AI REASONING (CHAT STYLE) -->
+    <h2>🧠 AI Reasoning</h2>
+
+    <div class="ai-flow">
+
+        {% for item in explanations %}
+
+        <div class="flow {{ item.color }}">
+            <b>{{ item.feature }}</b><br>
+            {{ item.label }}<br>
+            Score: {{ item.value }}
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+</div>
+
+</body>
+</html>
