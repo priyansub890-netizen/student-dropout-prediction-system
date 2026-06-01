@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Predict Student Dropout</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="form-container">
+
+    <h1>📋 Student Information Form</h1>
+
+    <form action="/predict" method="POST">
+
+        <label>G1 Marks</label>
+        <input type="number" name="G1" required>
+
+        <label>G2 Marks</label>
+        <input type="number" name="G2" required>
+
+        <label>Study Time</label>
+        <input type="number" name="studytime" required>
+
+        <label>Failures</label>
+        <input type="number" name="failures" required>
+
+        <label>Absences</label>
+        <input type="number" name="absences" required>
+
+        <label>Age</label>
+        <input type="number" name="age" required><br>
+
+        <label>Sex</label>
+        <select name="sex">
+            <option value="">Select</option>
+            <option value="0">Female</option>
+            <option value="1">Male</option>
+        </select><br>
+
+        <label>Internet Access</label>
+        <select name="internet">
+            <option value="">Select</option>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select><br>
+
+        <label>School Support</label>
+        <select name="schoolsup">
+            <option value="">Select</option>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select><br>
+
+        <label>Family Support </label>
+        <select name="famsup">
+            <option value="">Select</option>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select>
+
+        <br><br>
+
+        <button type="submit">🔍 Predict Dropout Risk</button>
+
+    </form>
+
+</div>
+
+</body>
+</html>
