@@ -1,0 +1,84 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #0b1220;
+    color: white;
+}
+
+/* FORM */
+.form-container, .dashboard, .result-container {
+    text-align: center;
+    padding: 30px;
+}
+
+/* INPUT */
+input, select {
+    width: 80%;
+    padding: 10px;
+    margin: 8px;
+}
+
+/* BUTTON */
+button {
+    padding: 10px 20px;
+    background: #38bdf8;
+    border: none;
+    border-radius: 8px;
+}
+
+/* CIRCLE */
+.circle {
+    width: 160px;
+    height: 160px;
+    margin: 20px auto;
+    border-radius: 50%;
+    background: conic-gradient(
+        #22c55e calc(var(--percent) * 1%),
+        #1f2937 0
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.circle::before {
+    content: "";
+    width: 120px;
+    height: 120px;
+    background: #0b1220;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.inner {
+    position: absolute;
+    font-size: 22px;
+}
+
+/* WHY BOX */
+.why-box {
+    margin: 20px;
+    padding: 15px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 10px;
+}
+
+/* AI FLOW */
+.ai-flow {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+}
+
+.flow {
+    padding: 10px;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.06);
+}
+
+/* COLORS */
+.flow.red { border-left: 4px solid #ef4444; }
+.flow.orange { border-left: 4px solid #facc15; }
+.flow.green { border-left: 4px solid #22c55e; }
